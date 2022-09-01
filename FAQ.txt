@@ -127,6 +127,21 @@ Ans: Syntax:
       # OUTPUT:- I am Sample Mehtod.
                  Printing a method, prints its last statement: 351
 
+Q8. Enumerable Methods- all?, any?, one?, none?
+Ans: all?
+     Returns true if all elements meet a specified criterion; false otherwise.
+
+     any?
+     Returns true if any element meets a specified criterion; false otherwise.
+
+     none?
+     Returns true if no element meets a specified criterion; false otherwise.
+
+     one?
+     Returns true if exactly one element meets a specified criterion; false otherwise.
+
+     For more refer link: https://ruby-doc.org/core-3.1.2/Enumerable.html#method-i-one-3F
+
 $$ ------Modules------
  
 Q1. Module vs Class?
@@ -241,3 +256,5 @@ Ans:Object is the default root of all Ruby objects.
 
 Q3. BasicObject class?
 Ans: BasicObject is the parent class of all classes in Ruby. It's an explicit blank class.
+
+
