@@ -17,8 +17,9 @@ end
 # Calling method with parameters.
 para_method 'GeeksforGeeks', 'Sudo'
 puts ''
-puts 'Without Parameters-'
+
 # Calling method without passing parameters.
+puts 'Without Parameters-'
 para_method
 puts
 
