@@ -193,7 +193,7 @@ Ans: Include is used to importing module code. Ruby will throw an error when we 
  So, the only way is to access it through the class definition.
 
  In simple words, the difference between include and extend is that ‘include’ is for adding methods of module to the class as 
- instance methods and ‘extend’ is for adding methods of module to the class as class methods.
+ instance methods and ‘extend’ is for adding methods of module to the class as class methods. 
 
 Q5. Class include Module, Module include Module, Class include Class, Module include Class?
 Ans: Only Module are included, Class is never included. (Only statement 1 & 2 are True.)

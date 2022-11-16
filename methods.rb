@@ -158,7 +158,7 @@ class TestMethods2
 end
 
 TestMethods2.class_method1
-TestMethods2.new.inst_method1
+TestMethods2.new.inst_method1 
 puts
 
 # ------Calling vs Printing Method------
