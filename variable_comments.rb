@@ -20,8 +20,10 @@ class Customer
 
   def display_details
     puts "Customer id #{@cust_id}"
-    puts "Customer name #{@cust_name}"
+    puts "Customer name #@cust_name"
+    # Both of above are correct
     puts "Customer address #{@cust_addr}"
+    # This is the syntax of String interpolation "Some text/string #{varialble/Ruby code}" 
 
     # NOTE: − In Ruby, you CAN access value of any variable or
     # constant by putting a hash (#) character just before that
@@ -30,7 +32,7 @@ class Customer
 
   def total_no_of_customers
     @@no_of_customers += 1
-    puts "Total number of customers: #{@@no_of_customers}"
+    puts "Total number of customers(Class Variable): #{@@no_of_customers}"
   end
 
   def show
@@ -44,7 +46,6 @@ cust1 = Customer.new('1', 'John', 'Wisdom Apartments, Ludhiya')
 cust2 = Customer.new('2', 'Poul', 'New Empire road, Khandala')
 
 # Call Methods
-byebug
 cust1.display_details
 cust2.display_details
 puts ''
@@ -63,10 +64,10 @@ class Class1
     puts "Global variable in Class1 is #{$global_variable}"
   end
 end
-
+# Both above and below are correct.
 class Class2
   def print_global
-    puts "Global variable in Class2 is #{$global_variable}"
+    puts "Global variable in Class2 is #$global_variable"
   end
 end
 
