@@ -179,3 +179,52 @@ puts 'Now printing the method using puts: '
 puts sample_method
 puts
 puts "Printing a method, prints its last statement: #{sample_method}"
+puts
+
+# ----super vs super()---
+puts "---super vs super()---"
+
+# Case 1
+class Parent_1
+  def abc(n)
+    puts "Case 1: Argument is/from: #{n}."
+  end
+end
+
+class Child_1 < Parent_1
+  def abc(args)
+    super
+  end
+end
+
+Child_1.new.abc("Child_1.new.abc('Message')")
+
+# Case 2
+class Parent_2
+  def abc(n)
+    puts "Case 2: Argument is/from: #{n}."
+  end
+end
+
+class Child_2 < Parent_2
+  def abc
+    super("super('Message')")
+  end
+end
+
+Child_2.new.abc
+
+# Case 3
+class Parent_3
+  def abc
+    puts "Case 3: Here abc of Parent_3 is parameterless."
+  end
+end
+
+class Child_3 < Parent_3
+  def abc(args)
+    super()
+  end
+end
+
+Child_3.new.abc("Message")

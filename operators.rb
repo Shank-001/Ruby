@@ -50,7 +50,7 @@ class Operators
   puts(10 <=> 20)
   puts(20 <=> 10)
 
-  # 20 is of Interger type while 20.00 is of Float type. And here .eql? checks type.
+  # 20 is of Interger type while 20.00 is of Float type.
   puts "If 20 is ==, .eql?, .equal? to 20.00"
   puts(20==20.00)
   puts(20.eql?(20.00))
@@ -62,6 +62,7 @@ class Operators
   puts (a.eql?b)
   puts (a.equal?b)
   puts
+  # eql? checks Type while equal? checks ObjectId.
 
   puts 'Comparing str1 and str2:'
   str1 = 'Hello'

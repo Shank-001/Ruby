@@ -49,3 +49,24 @@ key_val['gamma'] = 500
 puts
 
 # ------Hash Methods------
+puts "------Hash Methods------"
+
+h = {1 => 1, 2 => 4, 3 => 9, 4 => 16, 5 => 25}
+puts '---store and delete---'
+h.store(6, 36)
+puts "Hash after store(key, value): #{h}"
+h.delete(3)
+puts "Hash after delete(key): #{h}"
+puts
+
+puts '---keep_if and delete_if---'
+
+h = {1 => 1, 2 => 4, 3 => 9, 4 => 16, 5 => 25}
+h.keep_if {|key, value| key != 3}
+puts "After keep_if (k != 3): #{h}"
+# output = {1 => 1, 2 => 4, 4 => 16, 5 => 25}
+
+h = {1 => 1, 2 => 4, 3 => 9, 4 => 16, 5 => 25}
+h.delete_if {|key, value| key == 5}
+puts "After delete_if (k == 5): #{h}"
+# output = {1 => 1, 2 => 4, 3 => 9, 4 => 16}
