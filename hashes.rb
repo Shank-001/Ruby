@@ -41,17 +41,32 @@ key_val['alpha'] = 250
 key_val['beta'] = 400
 puts "After modifying value of alpha: #{key_val['alpha']}"
 puts "After modifying value of beta: #{key_val['beta']}"
+puts
 
 # A Ruby hash can be modified by adding or 
 # removing a key value pair in an already existing hash.
 puts '---Adding Hash---'
 key_val['gamma'] = 500
+puts "After adding gamma to hash: #{key_val}"
 puts
 
 # ------Hash Methods------
 puts "------Hash Methods------"
 
 h = {1 => 1, 2 => 4, 3 => 9, 4 => 16, 5 => 25}
+# h.default = "Default Value" will the dafault set value for any other 
+# Key(whether its numeric, string or symbol) then defined.
+puts '---default---'
+# h = Hash.new("Ola")   --Makes new hash and sets default value for all keys--
+h.default = "Zomato"
+puts "Gives set value when key is defined: #{h[4]}"
+puts "Gives default value when key is a String: #{h["abc"]}"
+puts "Gives default value when key is a Symbol: #{h[:xy]}"
+puts "Gives default value when key is any interger other than key itself: #{h[20]}"
+puts "Hash.default method also gives the default value: #{h.default}"
+puts "Hash.default(key) method also gives the default value (even if key is already defined): #{h.default(4)}"
+puts
+
 puts '---store and delete---'
 h.store(6, 36)
 puts "Hash after store(key, value): #{h}"
@@ -70,3 +85,11 @@ h = {1 => 1, 2 => 4, 3 => 9, 4 => 16, 5 => 25}
 h.delete_if {|key, value| key == 5}
 puts "After delete_if (k == 5): #{h}"
 # output = {1 => 1, 2 => 4, 3 => 9, 4 => 16}
+puts
+
+puts '---each iterator---'
+h.each {|a| puts "Key a[0]: #{a[0]} Value a[1]: #{a[1]}"}
+puts
+# Both above and below code produce same outputs
+h.each {|x,y| puts "Key x: #{x} Value y: #{y}"}
+puts
