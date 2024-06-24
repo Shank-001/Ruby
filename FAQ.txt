@@ -1,4 +1,4 @@
-$$ ------Methods------
+$$ ---------------------------------------------------------------METHODS---------------------------------------------------------------------
 
 Q1. Method without Parentheses()?
 Ans: In Ruby, when you define or call (execute, use) a method, 
@@ -142,7 +142,7 @@ Ans: all?
 
      For more refer link: https://ruby-doc.org/core-3.1.2/Enumerable.html#method-i-one-3F
 
-$$ ------Modules------
+$$ ---------------------------------------------------------------------MODULES---------------------------------------------------------------------
  
 Q1. Module vs Class?
 Ans: ╔═══════════════╦═══════════════════════════╦═════════════════════════════════╗
@@ -199,7 +199,7 @@ Q5. Class include Module, Module include Module, Class include Class, Module inc
 Ans: Only Module are included, Class is never included. (Only statement 1 & 2 are True.)
  Class can include Module and Module can also include another Module.
 
-$$ ------Strings------
+$$ ---------------------------------------------------------------------STRING---------------------------------------------------------------------
 
 Q1. String Interpolation #{ }?
 Ans: You can have actual code inside the interpolation #{ }. Ruby calls the 'to_s' method 
@@ -217,7 +217,7 @@ Ans: String#+ : string + other_string → new_string
  Concatenates each object in objects to self and returns self.
  Takes multiple arguments(objects).
 
-$$ ------Array------
+$$ ---------------------------------------------------------------------ARRAY---------------------------------------------------------------------
 
 Q1. Array#+ vs Array#concat ?
 Ans: According to the Ruby docs, the difference is:
@@ -231,7 +231,7 @@ Array#concat :
  So the + operator will create a new array each time it is called (which is expensive), 
  while .concat only appends the new element.
 
-$$ ------Iterator------
+$$ ---------------------------------------------------------------------ITERATOR---------------------------------------------------------------------
 
 Q1. each vs map Iterator?
 Ans: Array#each executes the given block for each element of the array, 
@@ -243,7 +243,7 @@ Ans: Array#each executes the given block for each element of the array,
 Q2. collect Iterator?
 Ans: 
 
-$$ ------General------
+$$ ---------------------------------------------------------------------GENERAL---------------------------------------------------------------------
 
 Q1. Kernel Module?
 Ans: The Kernel module is included by class Object, 
