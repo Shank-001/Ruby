@@ -3,7 +3,8 @@ proc_test = proc { puts 'I am Proc.' }
 # proc_test = Proc.new { puts "I am Proc.new."}   --Also Valid--
 proc_test.call
 # proc_test.()              --Also Valid--
-# proc_test.[]              --Also Valid--
+# proc_test.[]              --Also Valid--  
+# proc_test[]               --Also Valid--
 # proc_test.===             --Also Valid--
 
 # ---Proc with do...end---
@@ -36,6 +37,7 @@ lambda_test = -> { puts 'I am Lambda.' }
 lambda_test.call
 # lambda_test.()            --Also Valid--
 # lambda_test.[]            --Also Valid--
+# lambda_test[]             --Also Valid--
 # lambda_test.===           --Also Valid--
 
 # ---Lambda do...end---
