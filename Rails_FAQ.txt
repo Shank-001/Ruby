@@ -1,0 +1,35 @@
+$$ ---------------------------------------------------------------GENERAL---------------------------------------------------------------------
+
+Q1. Difference b/w find and find_by?
+Ans: Record Retrieval: find(2) , find_by(title: "Title", id: 2)
+
+	find: Retrieves a record based on its primary key (usually id). It raises an ActiveRecord::RecordNotFound exception if the record doesn't exist.
+	find_by: Searches for a record based on any attribute, not just the primary key. It returns nil if no record matches the criteria.
+
+	Multiple Records: find([1,2,3 ]) , find_by(id: [1,2,3])
+
+	find: Can accept multiple primary key values or an array of primary keys. It returns an array containing all matching records. If any record is missing, it raises an exception.
+	find_by: Always returns at most one record, even if you pass multiple arguments. It retrieves the first record that matches all the conditions.
+
+$$ ---------------------------------------------------------------ASSOCIATIONS---------------------------------------------------------------------
+
+Q1. has_and_belongs_to_many vs has_many :through
+Ans: Has Many Through: For many to many association, and when Joining table model is needed to modify by adding validation, callback etc.
+	(Ex: UserCoupon, OrderProduct, Doctor >Appointment< Patient)
+
+	Has And Belongs To Many: For many to many association, where model of joining table is not needed.
+
+Q2. Single Table Inheritance
+Ans: Multiple subclasses inherit from one superclass, The superclass has a “type” column to determine which subclass an object belongs to,
+	Database table for all of them is same. (Ex: Account [Merchant, Creator, Fan], Vehicle [Bike, Car, Bicycle] )
+
+Q3. Polymorphic Has Many Through
+Ans: Link: 
+	https://medium.com/@utkukaynar/polymorphic-has-many-through-associations-in-ruby-on-rails-97778e1cea1a#:~:text=When%20you%20have%20different%20models,through%20relationship%20without%20a%20hassle.
+
+$$ ---------------------------------------------------------------RSPEC---------------------------------------------------------------------
+
+Q1. let vs let!
+Ans: https://mixandgo.com/learn/ruby/let-vs-let!
+	Unlike let! the let block is lazy loaded.
+
