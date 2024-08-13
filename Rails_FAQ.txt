@@ -11,6 +11,13 @@ Ans: Record Retrieval: find(2) , find_by(title: "Title", id: 2)
 	find: Can accept multiple primary key values or an array of primary keys. It returns an array containing all matching records. If any record is missing, it raises an exception.
 	find_by: Always returns at most one record, even if you pass multiple arguments. It retrieves the first record that matches all the conditions.
 
+Q2. How rails is able to use, `product.name = "John"`
+	for this, 
+	def name=(val)
+	  @name = val
+	end
+Ans: In Ruby, methods ending with = are treated as setter methods, allowing syntax like product.name = "John" to be used as shorthand for 	product.name=("John"). Rails leverages this by automatically generating these setter methods for model attributes based on the 		database schema, making it easy to interact with object attributes as if they were simple variables. This provides a clean, 		intuitive interface for working with data in Rails applications.
+
 $$ ---------------------------------------------------------------ASSOCIATIONS---------------------------------------------------------------------
 
 Q1. has_and_belongs_to_many vs has_many :through
